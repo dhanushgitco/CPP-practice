@@ -1,0 +1,61 @@
+#include "esp_camera.h"
+#include <Wifi.h>
+#include <WebServer.h>
+
+//=====================================================CAMERA MODEL===========================================================================
+
+#define CAMERA_MODEL_AI_THINKER
+#include "camera_pins.h"
+
+//=======================================================MOTOR PINS==========================================================================
+
+#define M1A 12
+#define M1B 13
+#define M2A 14
+#define M2B 15
+
+//=========================================================WIFI=================================================================================
+
+const char* ssid = "ESP32_car";
+const char* passord = "12345678";
+
+WebServer server(80);
+
+//==================================================MOTOR FUNCTIONS================================================================================
+
+void stopCar(){
+digitalWire(M1A,LOW);
+digitalWire(M1B,LOW);
+digitalWire(M2A,LOW);
+digitalWire(M2B,LOW);
+}
+
+void forward(){
+digitalWire(M1A,HIGH);
+digitalWire(M1B,LOW);
+digitalWire(M2A,HIGH);
+digitalWire(M2B,LOW);
+}
+
+void backward(){
+digitalWire(M1A,LOW);
+digitalWire(M1B,HIGH);
+digitalWire(M2A,LOW);
+digitalWire(M2B,HIGH);
+}
+
+void left(){
+digitalWire(M1A,LOW);
+digitalWire(M1B,HIGH);
+digitalWire(M2A,HIGH);
+digitalWire(M2B,LOW);
+}
+
+void right(){
+digitalWire(M1A,HIGH);
+digitalWire(M1B,LOW);
+digitalWire(M2A,LOW);
+digitalWire(M2B,HIGH);
+}
+
+//======================================================WEB PAGE=======================================================================================
