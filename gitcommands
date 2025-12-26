@@ -1,0 +1,90 @@
+Microsoft Windows [Version 10.0.26100.7462]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Dhanush Yakkali>git --version
+git version 2.52.0.windows.1
+
+C:\Users\Dhanush Yakkali>cd C:\gitrepo\CPP-practice'
+The system cannot find the path specified.
+
+C:\Users\Dhanush Yakkali>cd C:\gitrepo\CPP-practice
+
+C:\gitrepo\CPP-practice>dir
+ Volume in drive C is Windows
+ Volume Serial Number is E877-5A3E
+
+ Directory of C:\gitrepo\CPP-practice
+
+12/26/2025  02:41 PM    <DIR>          .
+11/28/2025  07:49 PM    <DIR>          ..
+12/26/2025  02:17 PM                74 datatypes.py
+               1 File(s)             74 bytes
+               2 Dir(s)  47,429,709,824 bytes free
+
+C:\gitrepo\CPP-practice>git branch
+
+C:\gitrepo\CPP-practice>git add .
+
+C:\gitrepo\CPP-practice>git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   datatypes.py
+
+
+C:\gitrepo\CPP-practice>git add .
+
+C:\gitrepo\CPP-practice>git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   datatypes.py
+
+
+C:\gitrepo\CPP-practice>git commit -m 'adding my first datatype py file'
+error: pathspec 'my' did not match any file(s) known to git
+error: pathspec 'first' did not match any file(s) known to git
+error: pathspec 'datatype' did not match any file(s) known to git
+error: pathspec 'py' did not match any file(s) known to git
+error: pathspec 'file'' did not match any file(s) known to git
+
+C:\gitrepo\CPP-practice>git commit -m "adding my first datatype py file"
+[main (root-commit) 7d3fb7f] adding my first datatype py file
+ 1 file changed, 7 insertions(+)
+ create mode 100644 datatypes.py
+
+C:\gitrepo\CPP-practice>git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 275 bytes | 45.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/dhanushgitco/CPP-practice.git
+ * [new branch]      main -> main
+
+C:\gitrepo\CPP-practice>git branch
+* main
+
+C:\gitrepo\CPP-practice>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\gitrepo\CPP-practice>git add .
+
+C:\gitrepo\CPP-practice>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\gitrepo\CPP-practice>
+
